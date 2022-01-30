@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
-import Card from "../../components/NavBar/Card";
+import Card from "../../components/Card";
 import classes from "../../styles/Home.module.scss";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -16,7 +16,6 @@ export default function Details() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   const getData = (url) => {
-    console.log(url);
     axios.get(url).then((res) => {
       const details = res.data;
       setDetails(details);
@@ -25,14 +24,11 @@ export default function Details() {
   };
 
   useEffect(() => {
-    console.log(router.query.movieId);
     setIsLoading(true);
-    console.log(typeof movieId);
     if (!movieId) {
       return;
     }
     {
-      console.log(movieId);
       const api =
         `https://api.themoviedb.org/3/movie/` +
         router.query.movieId +
@@ -47,7 +43,6 @@ export default function Details() {
       <NavBar />
       {!isLoading ? (
         <div className={styles.container + " d-flex flex-column"}>
-          {console.log(details)}
           <Image
             className={styles.block}
             src={"https://image.tmdb.org/t/p/original" + details.backdrop_path}
