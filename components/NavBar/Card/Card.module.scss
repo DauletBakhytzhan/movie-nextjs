@@ -1,0 +1,73 @@
+@import "macro-css";
+.wrapper {
+  color: white;
+  border-bottom: 2px solid #404040;
+
+  p {
+    font-size: 12px;
+    width: 400px;
+
+    /**Major Properties**/
+    overflow: hidden;
+    line-height: 1.3rem;
+    max-height: 8rem;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+  }
+  a {
+    text-decoration: none;
+    h3 {
+      color: white;
+    }
+    h3:hover {
+      color: orange;
+      transition: 0.3s;
+    }
+  }
+}
+
+.block {
+  display: flex;
+}
+@media only screen and (max-width: 840px) {
+  .block {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+  .wrapper {
+ 
+    p {
+      font-size: 12px;
+      width: 300px;
+  
+      /**Major Properties**/
+      overflow: hidden;
+      line-height: 1.2rem;
+      max-height: 6rem;
+      -webkit-box-orient: vertical;
+      display: block;
+      display: -webkit-box;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 4;
+    }
+    a {
+      text-decoration: none;
+      h3 {
+        color: white;
+      }
+      h3:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+//   h3 {
+//     color: white;
+//   }

@@ -1,0 +1,37 @@
+.navbar {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 20% 20% 20% 20%;
+  background-color: #1f1f1f;
+  height: 75px;
+
+ a {
+  transform: skew(-20deg);
+  text-decoration: none;
+  font-size: 27px;
+  outline: 3px, solid transparent;
+  text-align: center;
+  font-weight: bold;
+  /* text-decoration: darkorange; */
+  color: rgb(34, 32, 32);
+  /* text-shadow: 0 0 8px white, 0 0 30px white; */
+  transition: 0.4s;
+}
+}
+
+.navbar :global(a.active) {
+  /* outline: 10px solid white; */
+
+  background-color: rgb(194, 194, 194);
+  outline-width: 10px;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 75px;
+  transform: skew(-20deg);
+}
+
+.navbar__text {
+  color: white;
+  transform: skew(20deg);
+  text-align: center;
+}
