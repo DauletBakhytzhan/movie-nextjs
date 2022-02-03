@@ -1,0 +1,1 @@
+export const AUTH_KEY = 'eefa0923cec6b75871cb4213f93fdd34'

@@ -1,19 +1,15 @@
 .container {
-    margin-top: 75px !important; 
+  margin-top: 75px !important;
   position: relative;
-  padding: 0 2rem;
-  background-color: #141414;
-  max-width: 80%;
   margin: auto;
-  // Make sure this color has an opacity of less than 1
-  backdrop-filter: blur(100px); // This be the blur
 
   .wrapper {
-    position: absolute;
-    top: 45%;
-    left: 25%;
-    transform: translate(-50%, -50%);
     opacity: 1 !important;
+    .slider {
+      p {
+        color: white;
+      }
+    }
     p {
       font-size: 16px;
       color: white;
@@ -38,7 +34,9 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
-
+    a {
+      text-decoration: none;
+    }
     h5 {
       color: white;
     }
@@ -46,5 +44,16 @@
 }
 
 .block {
-  opacity: 0.4;
+  position: relative;
+  opacity: 0.9;
+  border-radius: 10%;
+}
+
+.legend{
+  font-size: 10px;
+}
+.legend :hover {
+  color: orange;
+  transition: 0.3s;
+  cursor: pointer;
 }
